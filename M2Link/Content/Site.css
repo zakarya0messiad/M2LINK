@@ -1,0 +1,23 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.bg-blue {
+    background-color: #3478c9;    
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255) !important;
+}
+
+.navbar {
+    margin-bottom: 15px !important;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

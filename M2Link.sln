@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2Link", "M2Link\M2Link.csproj", "{0826F4B3-E555-49D7-B82D-0830EE6BA726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2Link.Console", "M2Link.Console\M2Link.Console.csproj", "{C2947DA3-79C2-4DF1-AD47-042227F1B386}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0826F4B3-E555-49D7-B82D-0830EE6BA726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0826F4B3-E555-49D7-B82D-0830EE6BA726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0826F4B3-E555-49D7-B82D-0830EE6BA726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0826F4B3-E555-49D7-B82D-0830EE6BA726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2947DA3-79C2-4DF1-AD47-042227F1B386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2947DA3-79C2-4DF1-AD47-042227F1B386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2947DA3-79C2-4DF1-AD47-042227F1B386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2947DA3-79C2-4DF1-AD47-042227F1B386}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81D9AA97-3A20-4885-AFF5-EE99FF94368B}
+	EndGlobalSection
+EndGlobal

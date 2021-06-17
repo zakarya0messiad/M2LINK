@@ -1,0 +1,12 @@
+
+.DS_Store
+
+.vs/
+
+packages/
+
+M2Link/obj/Debug/
+
+M2Link/bin/
+
+M2Link.Console/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache

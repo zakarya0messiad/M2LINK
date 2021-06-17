@@ -1,0 +1,62 @@
+﻿@model M2Link.Entities.User
+
+@{
+    ViewBag.Title = "Profil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="card" style="width: 45rem;">
+    <div class="card-body">
+        <h5 class="card-title">Profil de @Html.ValueFor(model => model.Pseudo)</h5>
+        <br>
+        <dl class="row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Nom)
+            </dt>
+
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Nom)
+            </dd>
+
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Prenom)
+            </dt>
+
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Prenom)
+            </dd>
+
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Pseudo)
+            </dt>
+
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Pseudo)
+            </dd>
+        </dl>
+    </div>
+</div>
+<br>
+<br>
+@if (!ViewBag.IsMe)
+{
+    if (!ViewBag.Follow)
+    {
+        <a class="btn btn-outline-primary btn-lg" href="~/Users/Follow/@Model.Id" role="button" a><i class="bi bi-hand-thumbs-up"></i>  Suivre</a>
+    }
+    else
+    {
+        <a class="btn btn-primary btn-lg" href="~/Users/Unfollow/@Model.Id" role="button"><i class="bi bi-hand-thumbs-down"></i>  Ne plus suivre</a>
+    }
+}

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+        <a class="navbar-brand" href="#">M2Link</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav">
+                <li>
+                    @Html.ActionLink("Accueil", "Index", "Home", null, new { @class = "nav-link" })
+                </li>
+                <li>
+                    @Html.ActionLink("Mon profil", "Profil", "EditProfil", null, new { @class = "nav-link" })
+                </li>
+                <li>
+                    @Html.ActionLink("Utilisateurs", "Index", "Users", null, new { @class = "nav-link" })
+                </li>
+                <li>
+                    @Html.ActionLink("Mes messages", "Index", "Message", null, new { @class = "nav-link" })
+                </li>
+                <li>
+                    @Html.ActionLink("Déconnexion", "Logout", "Home", null, new { @class = "nav-link" })
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
+        <p>&copy; @DateTime.Now.Year - Our M2Link ASP.NET Application, Salah & Zakarya</p>
+    </footer>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Liste des utilisateurs</li>
+    </ol>
+</nav>
+
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Pseudo</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in ViewBag.UsersList)
+        {
+        <tr>
+            <td><a href="~/Users/Profil/@user.Id">@user.Pseudo</a></td>
+            <td>@user.Nom </td>
+            <td>@user.Prenom</td>
+            <td>@user.Email</td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,26 @@
+﻿@model M2Link.Entities.Message
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Créer un nouveau message</li>
+    </ol>
+</nav>
+<br>
+
+@using (Html.BeginForm("Create", "Message", FormMethod.Post))
+{
+    <br />
+    <div>
+        <textarea class="form-control" rows="5" name="Content" required placeholder="Contenu du message..."></textarea>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        <input type="submit" value="Publier" class="btn btn-primary" />
+    </div>
+}

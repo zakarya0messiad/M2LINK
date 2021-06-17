@@ -1,0 +1,55 @@
+﻿@model M2Link.Entities.User
+
+@{
+    ViewBag.Title = "Profil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Mon compte</li>
+    </ol>
+</nav>
+<br>
+<div class="card" style="width: 45rem;">
+    <div class="card-body">
+        <br>
+        <dl class="row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Nom)
+            </dt>
+
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Nom)
+            </dd>
+
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Prenom)
+            </dt>
+
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Prenom)
+            </dd>
+
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Pseudo)
+            </dt>
+
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Pseudo)
+            </dd>
+        </dl>
+    </div>
+</div>
+<br>
+<br>
+<div>
+    @Html.ActionLink("Modifier mon profil", "Form", "EditProfil", new { @class = "btn btn-primary btn-l", @role = "button" })
+</div>

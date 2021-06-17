@@ -1,0 +1,81 @@
+﻿@model M2Link.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+
+}
+<div class="card" style="width: 95%;">
+    <div class="card-body">
+        <h5 class="card-title">Créer votre compte</h5>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nom)
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Nom, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nom de famille*", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Nom, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Prenom)
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Prenom, new { htmlAttributes = new { @class = "form-control", @placeholder = "Prénom*", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Prenom, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email)
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Votre adresse mail*", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Pseudo)
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Pseudo, new { htmlAttributes = new { @class = "form-control", @placeholder = "Votre pseudo*", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Pseudo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Mdp)
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Mdp, new { htmlAttributes = new { @class = "form-control", @placeholder = "Votre mot de passe*", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Mdp, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Verif_mdp)
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Verif_mdp, new { htmlAttributes = new { @class = "form-control", @placeholder = "Confirmez votre mot de passe*", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Verif_mdp, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="S'inscrire" class="btn btn-primary" />
+                </div>
+                <div class="form-group">
+                    <small class="form-text text-muted">Les champs avec une astérisque (*) sont obligatoires.</small>
+                    <small class="form-text text-muted">Le mot de passe doit avoir au moins 8 caractères, contenir une lettre minuscule et masjucule, un chiffre et un caractère spécial.</small>
+                </div>
+            </div>
+        }
+        <div>
+            @Html.ActionLink("Avez-vous déjà un compte ?", "Form", "Login", null, new { @class = "card-link" })
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
